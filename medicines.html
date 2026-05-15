@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medicines | CareMed Portal</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">CM</span>
+        <span>
+          <strong>CareMed</strong>
+          <small>Hospital medicine portal</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Dashboard</a>
+        <a href="patients.html">Patients</a>
+        <a href="prescriptions.html">Prescriptions</a>
+        <a class="active" href="medicines.html">Medicines</a>
+        <a href="appointments.html">Appointments</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-heading">
+        <p class="eyebrow">Patient medicine board</p>
+        <h1>Track medicine routines</h1>
+        <p>This view is designed for patient portals and nursing teams to check what needs to be taken today.</p>
+      </section>
+
+      <section id="medicineBoard" class="medicine-grid"></section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
