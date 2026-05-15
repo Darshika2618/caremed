@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Appointments | CareMed Portal</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">CM</span>
+        <span>
+          <strong>CareMed</strong>
+          <small>Hospital medicine portal</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Dashboard</a>
+        <a href="patients.html">Patients</a>
+        <a href="prescriptions.html">Prescriptions</a>
+        <a href="medicines.html">Medicines</a>
+        <a class="active" href="appointments.html">Appointments</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-heading">
+        <p class="eyebrow">Follow-up care</p>
+        <h1>Schedule patient appointments</h1>
+        <p>Book follow-ups so the hospital can connect prescriptions, patient instructions, and future visits.</p>
+      </section>
+
+      <section class="split-layout">
+        <form id="appointmentForm" class="form-panel">
+          <h2>New appointment</h2>
+
+          <label>
+            Patient
+            <select id="appointmentPatient" required></select>
+          </label>
+
+          <label>
+            Date
+            <input id="appointmentDate" type="date" required>
+          </label>
+
+          <label>
+            Time
+            <input id="appointmentTime" type="time" required>
+          </label>
+
+          <label>
+            Doctor
+            <input id="appointmentDoctor" type="text" placeholder="Dr. Rao" required>
+          </label>
+
+          <label>
+            Reason
+            <input id="appointmentReason" type="text" placeholder="Medicine review" required>
+          </label>
+
+          <button class="button primary full" type="submit">Schedule appointment</button>
+        </form>
+
+        <div class="data-panel">
+          <div class="panel-header">
+            <h2>Upcoming appointments</h2>
+          </div>
+
+          <div id="appointmentList" class="records"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
