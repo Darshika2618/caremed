@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prescriptions | CareMed Portal</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">CM</span>
+        <span>
+          <strong>CareMed</strong>
+          <small>Hospital medicine portal</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Dashboard</a>
+        <a href="patients.html">Patients</a>
+        <a class="active" href="prescriptions.html">Prescriptions</a>
+        <a href="medicines.html">Medicines</a>
+        <a href="appointments.html">Appointments</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-heading">
+        <p class="eyebrow">Clinical workflow</p>
+        <h1>Add prescriptions and medicine instructions</h1>
+        <p>Staff can attach medicine schedules to each patient login so patients can view dosage, timing, and instructions.</p>
+      </section>
+
+      <section class="split-layout">
+        <form id="prescriptionForm" class="form-panel">
+          <h2>New prescription</h2>
+
+          <label>
+            Patient
+            <select id="prescriptionPatient" required></select>
+          </label>
+
+          <label>
+            Medicine name
+            <input id="medicineName" type="text" placeholder="Metformin 500 mg" required>
+          </label>
+
+          <label>
+            Dosage
+            <input id="medicineDose" type="text" placeholder="1 tablet" required>
+          </label>
+
+          <label>
+            Timing
+            <select id="medicineTiming" required>
+              <option>Morning after food</option>
+              <option>Morning before food</option>
+              <option>Afternoon after food</option>
+              <option>Night after food</option>
+              <option>Every 8 hours</option>
+            </select>
+          </label>
+
+          <label>
+            Doctor notes
+            <textarea id="doctorNotes" rows="4" placeholder="Drink water and avoid skipping doses."></textarea>
+          </label>
+
+          <button class="button primary full" type="submit">Save prescription</button>
+        </form>
+
+        <div class="data-panel">
+          <div class="panel-header">
+            <h2>Prescription history</h2>
+            <a class="button small" href="medicines.html">View medicine board</a>
+          </div>
+
+          <div id="prescriptionList" class="records"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
