@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Patients | CareMed Portal</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">CM</span>
+        <span>
+          <strong>CareMed</strong>
+          <small>Hospital medicine portal</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Dashboard</a>
+        <a class="active" href="patients.html">Patients</a>
+        <a href="prescriptions.html">Prescriptions</a>
+        <a href="medicines.html">Medicines</a>
+        <a href="appointments.html">Appointments</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-heading">
+        <p class="eyebrow">Patient management</p>
+        <h1>Create hospital patient logins</h1>
+        <p>Register patients, generate a patient ID, and keep their basic medicine portal details ready for staff.</p>
+      </section>
+
+      <section class="split-layout">
+        <form id="patientForm" class="form-panel">
+          <h2>Add patient</h2>
+
+          <label>
+            Full name
+            <input id="patientName" type="text" placeholder="Asha Mehta" required>
+          </label>
+
+          <label>
+            Age
+            <input id="patientAge" type="number" min="1" max="120" placeholder="42" required>
+          </label>
+
+          <label>
+            Phone
+            <input id="patientPhone" type="tel" placeholder="+91 98765 43210" required>
+          </label>
+
+          <label>
+            Department
+            <select id="patientDepartment" required>
+              <option>General Medicine</option>
+              <option>Cardiology</option>
+              <option>Endocrinology</option>
+              <option>Orthopedics</option>
+              <option>Pediatrics</option>
+            </select>
+          </label>
+
+          <button class="button primary full" type="submit">Create patient login</button>
+        </form>
+
+        <div class="data-panel">
+          <div class="panel-header">
+            <h2>Patient list</h2>
+            <input id="patientSearch" class="search" type="search" placeholder="Search patients">
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Patient ID</th>
+                  <th>Name</th>
+                  <th>Department</th>
+                  <th>Phone</th>
+                </tr>
+              </thead>
+              <tbody id="patientsTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
