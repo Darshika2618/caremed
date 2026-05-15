@@ -1,0 +1,9 @@
+{
+  "name": "caremed-hospital-portal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A demo hospital medicine portal for staff and patient logins.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
