@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CareMed Portal</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="CareMed home">
+        <span class="brand-mark">CM</span>
+        <span>
+          <strong>CareMed</strong>
+          <small>Hospital medicine portal</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="active" href="index.html">Dashboard</a>
+        <a href="patients.html">Patients</a>
+        <a href="prescriptions.html">Prescriptions</a>
+        <a href="medicines.html">Medicines</a>
+        <a href="appointments.html">Appointments</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">For clinics and hospitals</p>
+          <h1>Medicine schedules patients can actually follow.</h1>
+          <p class="lead">CareMed lets hospital staff create patient logins, add prescriptions, track medicine routines, and keep follow-ups organized from one simple portal.</p>
+          <div class="actions">
+            <a class="button primary" href="patients.html">Create patient login</a>
+            <a class="button ghost" href="prescriptions.html">Add prescription</a>
+          </div>
+        </div>
+
+        <div class="login-panel" aria-label="Demo login panel">
+          <div class="panel-tabs" role="tablist">
+            <button class="tab active" type="button" data-login-tab="staff">Staff</button>
+            <button class="tab" type="button" data-login-tab="patient">Patient</button>
+          </div>
+
+          <form id="loginForm" class="form">
+            <label>
+              Email or patient ID
+              <input id="loginEmail" type="text" value="staff@cityhospital.com" required>
+            </label>
+            <label>
+              Password
+              <input type="password" value="demo1234" required>
+            </label>
+            <button class="button primary full" type="submit">Open demo portal</button>
+            <p id="loginMessage" class="form-note">Use the demo login to preview the workflow.</p>
+          </form>
+        </div>
+      </section>
+
+      <section class="stats-band" aria-label="Portal summary">
+        <article>
+          <span id="totalPatients">0</span>
+          <p>active patients</p>
+        </article>
+        <article>
+          <span id="totalPrescriptions">0</span>
+          <p>prescriptions</p>
+        </article>
+        <article>
+          <span id="todayMeds">0</span>
+          <p>medicine doses today</p>
+        </article>
+        <article>
+          <span id="upcomingAppointments">0</span>
+          <p>appointments</p>
+        </article>
+      </section>
+
+      <section class="workspace">
+        <div>
+          <div class="section-title">
+            <p class="eyebrow">Hospital view</p>
+            <h2>Today at a glance</h2>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Patient</th>
+                  <th>Medicine</th>
+                  <th>Timing</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="dashboardRows"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <aside class="side-panel">
+          <h2>Patient portal preview</h2>
+          <div id="patientPreview" class="preview-list"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
